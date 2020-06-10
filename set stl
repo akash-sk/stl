@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n";
+typedef long long ll;
+
+int main(){
+    IOS;
+    //set stl
+    //it store unique number 
+    //it store element in sorted order or u can say each repeating element occur once 
+    set<int>s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    //iterator are like are iterative approach here but in pointer
+    //end jo hota element ke bad ka index
+    //here scope resolution operator tell which container iterator u want 
+    for(set<int>::iterator it=s.begin(); it!=s.end(); it++){
+        cout<<(*it)<<" ";
+    }
+    cout<<endl;
+    for(auto c:s){
+        cout<<c<<" ";
+    }
+    //if u want to clear all the element the 
+    s.clear();
+    //if u want to check it's size
+    cout<<s.size();
+    cout<<endl;
+    return 0;
+}
