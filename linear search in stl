@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+     ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int a[]={12,13,14,15,16};
+    int n=sizeof(a)/sizeof(int);
+    int key=111;
+     //it gives the element where it is present by indexing by 0
+     auto it =find(a,a+n,key);
+     int index=it-a;
+     //if element not present then it give( n )as a result 
+     if(index==n){
+        cout<<"element not present"<<endl;
+     }
+     else{
+        cout<<index<<endl;
+     }
+
+     return 0;
+}
