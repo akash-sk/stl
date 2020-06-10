@@ -1,0 +1,89 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    //how we can basically copy an object that how it is working 
+    string i="akash";
+    string j(i);
+    string k=j;
+    char a[10]={'a','b','c'};
+    string g=a;
+    cout<<i<<endl;
+    cout<<j<<endl;
+    cout<<k<<endl;
+    cout<<g<<endl;
+    
+    string t;
+    //there is function to check that a string is empty or not it does not take any arguement and it return boolen  value
+    if(t.empty()){
+        cout<<"this string is empty "<<endl;
+    }
+    
+    //we can also add string to an string like append function that take arguement as " string "
+    t.append(" i love c++");
+    
+    t+=" and ofcourse python ";
+    cout<<t<<endl;
+    
+    //we can find the length of the object string 
+    cout<<t.length()<<endl;
+    
+    //we can clear the content  of the string object
+    t.clear();
+    cout<<t.length()<<endl;
+    
+    //we can also compare two string 
+    //it return 0 if it is equal otherwise it less than 0 or return greater than 0 value
+    
+    string s0="apple";
+    string s1="mango";
+    cout<<s0.compare(s1)<<endl;//result here tell that apple is less than lexigraphically mango
+    
+    //u can use simple operator also which is overloaded operator
+    if(s1<s0){
+        cout<<"mango is lexigraphically greater "<<endl;
+    }
+    
+    //we can find index of any string inside an string okay
+    string s="i love apple juice than mang";
+    int index=s.find("apple");
+    cout<<index<<endl;
+    
+    
+    //u can also erase particular string from the string 
+    //it take arguement from index where u want to delete and next one how many u want after that 
+    string word="apple";
+    int n=word.length();
+    s.erase(index,n);
+    cout<<s;
+    
+    
+    
+       //if  u want to give the string some part to some other string 
+   //this type of arguement giving allow to copy this amount of string after 5 character starting index at 0
+   string a="akash dubey";
+   string s=a.substr(5);
+   cout<<s<<endl;
+   
+   
+   //if u want to copy a few character from the string give startin index from start and the total no of the character
+   //u want to copy like here
+   string k=a.substr(0,5);
+   cout<<k;
+   
+   
+   
+    //iterator idea
+    for(auto itr=s.begin(); itr!=s.end(); itr)
+      cout<<(*itr);
+      
+      
+     for(auto c:s){
+         cout<<c;
+     }
+    
+   
+    return 0;
+}
