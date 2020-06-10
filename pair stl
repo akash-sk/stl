@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    //all about the pair
+    pair<int,char>p;
+    p.first=10;
+    p.second='b';
+    
+    //copy
+    pair<int,char>p2(p);
+    
+    pair<int,string>p3=make_pair(100,"audi");
+    cout<<p3.first<<"  "<<p3.second<<endl;
+    
+    //taking the input 
+    int a,b;
+    cin>>a>>b;
+    
+    pair<int,int> p4=make_pair(a,b);
+    
+    //u can also make pair of array and vector
+    
+    
+    
+    
+    
+}
