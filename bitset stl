@@ -1,0 +1,20 @@
+#include <iostream>
+#include <bitset>
+using namespace std;
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n";
+typedef long long ll;
+
+int main(){
+    IOS;
+    bool b[30];
+    //here u all have to put 1 and 0 in the boolean array but it takes 1 byte =8bit
+    
+    //bitset but here in bitset it only takes area  1 bitset 
+   //counting start from right side 0 and so on
+    bitset<30> c;
+    c[3]=c[5]=1;
+    cout<<c<<endl;
+    
+    return 0;
+}
