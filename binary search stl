@@ -1,0 +1,41 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+     ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int a[]={20,30,40,40,40,50,100,1100};
+    int n=sizeof(a)/sizeof(int);
+    int key=40;
+     
+    //binary search in stl
+    
+    bool present=binary_search(a,a+n,key);
+    if(present){
+        cout<<"present ";
+    }
+    else{
+        cout<<"not present ";
+    }
+    
+    //when u want to get the index of the element
+    //lower_bound(s,e,key) and upper_bound(s,e,key)
+    //it would return greater than or equal to the key
+    //both the fucntion take the logarithmic time
+  
+    auto lb=lower_bound(a,a+n,key);
+    cout<<endl;
+    cout<<(lb-a)<<endl;
+    //upper_bound method
+    // it would give the first occurance of the greater than the key
+    auto ub=upper_bound(a,a+n,key);
+    cout<<endl;
+    cout<<(ub-a)<<endl;
+    
+    cout<<"occurance  frequency of the 40 "<<ub-lb<<endl;
+    
+    
+     
+
+     return 0;
+}
