@@ -1,0 +1,63 @@
+  
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main(){
+    //list is used when we want to insert the element at middle cause it can be 
+    //done easily but vector does not do that 
+    list<int>l;
+    //u can intialise
+    list<int>l1{1,2,3,10,8,5};
+    //u can create with different data type cause it template object u are creating
+    list<string>l2{"apple","guava","mango","banana"};
+    //that insert at tail
+    l2.push_back("pineapple");
+    
+    
+    //here u can also use the sort function that have in list not in stl sort cause we are not using the algorithm headr
+    
+    l2.sort();
+    
+    //u can also reverse the order 
+    l2.reverse();
+    
+    //u can also remove front 
+    cout<<l2.front()<<endl;
+    l2.pop_front();
+    
+    //u can add front to the list 
+    l2.push_front("kiwi");
+    cout<<l2.back()<<endl;
+    l2.pop_back();
+    //u can also traverse the list 
+    //here u can also write for every string s:l2 in 
+    
+    //we can also iterater
+    for(auto it=l2.begin(); it!=l2.end(); it++){
+        cout<<(*it)<<" ";
+    }
+    
+    //we can also remove a fruit 
+    string f;
+    cin>>f;
+    l2.remove(f);
+    
+    //we can also insert element at particular position
+    auto it=l2.begin();
+    it++;
+    it++;
+    l2.insert(it,"maka");
+    
+    
+    cout<<endl;
+    for(auto s:l2){
+        cout<<s<<" ";
+    
+    }
+    
+    
+     
+    
+    return 0;
+}
