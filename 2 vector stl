@@ -1,0 +1,76 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    vector<int> a;
+    vector<int> b(5,10); // this is useful when we want to intialise with n no of 0 (n,0)
+    vector<int> c(b.begin(),b.end()); // this is copy
+    
+    vector <int> d{1,2,3,4};//intialise in vector 
+    
+    //how we can iterate over the vector 
+    for(int i=0; i<c.size(); i++){
+        cout<<c[i]<<" ";
+    }
+    cout<<" \n";
+    for(auto it =b.begin(); it!=b.end(); it++){
+        cout<<(*it)<<" ";
+    }
+    cout<<"\n";
+    
+    for(int x:d){
+        cout<<x<<" ";
+    }
+    cout<<"\n";
+    
+    int n; 
+    cin>>n;
+    vector<int>v;
+    v.reserve(10000);//it used to fix the size of the array
+    for(int i=0; i<n ; i++){
+        int no;
+        cin>>no;
+        v.push_back(no);
+    }
+    for(int x:v){
+        cout<<x<<" ";
+        
+    }
+    cout<<"\n";
+    //push_back and pop_back take 0(1)time
+    
+    //insert some element at the middle
+    //insert o(n) time and after three element 
+    vector<int> k{1,2,3,14,10};
+    k.insert(v.begin()+3,100);
+    
+    
+    //we can also erase an element in the middle it o(n) time 
+    k.erase(v.begin()+3);
+    
+    //we can also clear the array vector
+    k.clear();
+    
+    
+    //there is empty checking functio
+    if(k.empty()){
+        cout<<"noting is there "<<endl;
+    }
+    //return boolean
+    k.push_back(10);
+    k.push_back(5);
+    k.push_back(4);
+    
+    //if u want the first element then u can look at 
+    cout<< k.front();
+    cout<<endl;
+    
+    for(int x:k){
+        cout<<x<<" ";
+        
+    }
+    cout<<"\n";
+    
+}
