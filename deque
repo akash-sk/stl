@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+//this one is doubly ended queue which is known as "deck " or deque 
+//this can insert and delecte at both end
+int main(){
+    
+    
+    return 0;
+}
+//it perform best at front and back insertiion and deletion
