@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+bool compare(int a,int b){
+    return a>b;
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+    }
+    sort(a,a+n,compare);
+    
+    for(int i=0; i<n; i++){
+        cout<<a[i]<<",";
+    }
+    return 0;
+}
+//here important point to not that function as a arguement to another fucntion that how the comparator work 
+so it basically bubble_sort(int a[],int n,bool (&compare)(int a,int b))
+if(compare(a[j],a[j+1]))
+then it work on this type of the fuction u wrote in abouve
