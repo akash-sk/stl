@@ -3,7 +3,7 @@ using namespace std;
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl "\n";
 typedef long long ll;
-
+//it is basically implemented using tree data structurne it could be bst/red black tree
 int main(){
     IOS;
     //set stl
