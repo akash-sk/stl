@@ -1,0 +1,10 @@
+stl guide
+array =vector
+character array=string 
+singly linked list=forward list
+doubly linked list=list
+stack=stack stl
+queue=queue stl
+binary tree,bst,red black tree=set
+bst=multiset
+heap=priority queue
